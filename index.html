@@ -1,27 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2297541670784623');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RAAZ ARMY</title>
+  <title>SONU KING</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +33,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
     .raaz-page {
       position: relative;
       width: 100%;
+      min-height: 100vh;
       min-height: 100svh;
       display: flex;
       align-items: center;
@@ -88,15 +73,15 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
     }
 
     @keyframes moveLight {
-      0% {
+      from {
         transform: translate(0, 0) scale(1);
       }
-      100% {
+      to {
         transform: translate(70px, 55px) scale(1.25);
       }
     }
 
-    /* Moving background grid */
+    /* Moving grid */
     .grid {
       position: absolute;
       inset: -50%;
@@ -130,28 +115,29 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       background: #ffffff;
       box-shadow: 0 0 16px #ffffff;
       opacity: 0;
+      pointer-events: none;
       animation: floatParticle 7s linear infinite;
     }
 
-    .particle:nth-child(1) {
+    .particle:nth-of-type(1) {
       left: 12%;
       bottom: -20px;
       animation-delay: 0s;
     }
 
-    .particle:nth-child(2) {
+    .particle:nth-of-type(2) {
       left: 30%;
       bottom: -20px;
       animation-delay: 2s;
     }
 
-    .particle:nth-child(3) {
+    .particle:nth-of-type(3) {
       left: 68%;
       bottom: -20px;
       animation-delay: 4s;
     }
 
-    .particle:nth-child(4) {
+    .particle:nth-of-type(4) {
       left: 88%;
       bottom: -20px;
       animation-delay: 1s;
@@ -171,6 +157,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       }
     }
 
+    /* Main content */
     .content {
       position: relative;
       z-index: 5;
@@ -191,7 +178,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       }
     }
 
-    /* Raaz Army shield logo */
+    /* SONU KING logo */
     .logo {
       position: relative;
       width: 138px;
@@ -239,11 +226,12 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
     }
 
     .logo svg {
-      width: 88px;
-      height: 88px;
+      width: 94px;
+      height: 94px;
       filter: drop-shadow(0 5px 8px rgba(0,0,0,0.45));
     }
 
+    /* Official label */
     .label {
       display: inline-flex;
       align-items: center;
@@ -275,6 +263,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       }
     }
 
+    /* Heading */
     h1 {
       margin: 0;
       font-size: clamp(42px, 8vw, 80px);
@@ -293,6 +282,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       -webkit-background-clip: text;
     }
 
+    /* Description */
     .description {
       max-width: 560px;
       margin: 19px auto 30px;
@@ -302,6 +292,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       font-weight: 400;
     }
 
+    /* Telegram button */
     .telegram-btn {
       position: relative;
       display: inline-flex;
@@ -366,6 +357,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
     .telegram-btn svg {
       position: relative;
       z-index: 2;
+      flex-shrink: 0;
       width: 22px;
       height: 22px;
     }
@@ -375,6 +367,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       z-index: 2;
     }
 
+    /* Footer */
     .brand {
       margin-top: 55px;
       color: rgba(255,255,255,0.5);
@@ -389,9 +382,9 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       font-weight: 700;
     }
 
+    /* Mobile responsive */
     @media (max-width: 600px) {
       .raaz-page {
-        min-height: 100svh;
         padding: 28px 16px;
       }
 
@@ -402,8 +395,8 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       }
 
       .logo svg {
-        width: 72px;
-        height: 72px;
+        width: 78px;
+        height: 78px;
       }
 
       .label {
@@ -448,6 +441,7 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
       *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -467,92 +461,126 @@ src="https://www.facebook.com/tr?id=2297541670784623&ev=PageView&noscript=1"
 
     <div class="content">
 
-      <div class="logo" aria-label="Raaz Army logo">
+      <!-- SONU KING Logo -->
+      <div class="logo" role="img" aria-label="Sonu King logo">
         <svg viewBox="0 0 120 120" aria-hidden="true">
           <defs>
-            <linearGradient id="raazShield" x1="0" y1="0" x2="1" y2="1">
+            <linearGradient id="sonuShield" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0" stop-color="#ff173d"/>
               <stop offset="1" stop-color="#096dff"/>
             </linearGradient>
-            <linearGradient id="raazText" x1="0" y1="0" x2="1" y2="0">
+
+            <linearGradient id="sonuText" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0" stop-color="#ffffff"/>
               <stop offset=".5" stop-color="#ffe6eb"/>
               <stop offset="1" stop-color="#ffffff"/>
             </linearGradient>
           </defs>
 
-          <path d="M60 7 101 24v30c0 27-16 48-41 60C35 102 19 81 19 54V24L60 7Z"
-                fill="url(#raazShield)" stroke="#ffffff" stroke-width="4"/>
+          <path
+            d="M60 7 101 24v30c0 27-16 48-41 60C35 102 19 81 19 54V24L60 7Z"
+            fill="url(#sonuShield)"
+            stroke="#ffffff"
+            stroke-width="4"
+          />
 
-          <path d="M60 14 93 28v25c0 21-12 39-33 50-21-11-33-29-33-50V28L60 14Z"
-                fill="none" stroke="rgba(255,255,255,.34)" stroke-width="2"/>
+          <path
+            d="M60 14 93 28v25c0 21-12 39-33 50-21-11-33-29-33-50V28L60 14Z"
+            fill="none"
+            stroke="rgba(255,255,255,.34)"
+            stroke-width="2"
+          />
 
-          <path d="M39 35 46 22l14 11 14-11 7 13-7 8H46l-7-8Z"
-                fill="#ffd85a" stroke="#11111a" stroke-width="2"/>
+          <!-- Crown -->
+          <path
+            d="M36 32 43 19 60 29 77 19 84 32 77 41H43L36 32Z"
+            fill="#ffd85a"
+            stroke="#11111a"
+            stroke-width="2"
+          />
 
-          <text x="60" y="76" text-anchor="middle"
-                font-family="Poppins,Arial,sans-serif" font-size="37"
-                font-weight="900" letter-spacing="-3"
-                fill="url(#raazText)" stroke="#11111a" stroke-width="1.4">RA</text>
+          <!-- SK initials -->
+          <text
+            x="60"
+            y="72"
+            text-anchor="middle"
+            font-family="Poppins, Arial, sans-serif"
+            font-size="29"
+            font-weight="900"
+            letter-spacing="-2"
+            fill="url(#sonuText)"
+            stroke="#11111a"
+            stroke-width="1"
+          >SK</text>
 
-          <path d="M42 86h36" stroke="#ffd85a" stroke-width="4" stroke-linecap="round"/>
+          <path
+            d="M39 84h42"
+            stroke="#ffd85a"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
         </svg>
       </div>
 
       <div class="label">
         <span class="label-dot"></span>
-        Official Raaz Army
+        Official Sonu King
       </div>
 
       <h1>
-        Raaz
-        <span>Army</span>
+        SONU
+        <span>KING</span>
       </h1>
 
       <p class="description">
-        Join Raaz Army for exclusive community updates, useful content and important announcements directly on Telegram.
+        Join Sonu King for exclusive community updates,
+        useful content and important announcements directly on Telegram.
       </p>
 
       <a
         class="telegram-btn"
-        href="https://telegram.me/+QbJzHwQ0UZw3ZTA1"
+        href="https://t.me/+s8afSxzWYDNmYjM1"
         target="_blank"
         rel="noopener noreferrer"
+        id="telegramButton"
       >
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M21.8 2.2c-.3-.2-.7-.3-1.1-.1L2.1 9.3c-.7.3-.8 1.2-.1 1.6l4.7 2.3 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.5 4.8 3.5c.6.4 1.4.1 1.5-.6l3.1-16.4c.1-.4 0-.8-.3-1ZM9.3 13.5l8.4-7.4-6.5 8.3-.5 2.5-1.4-3.4Z"/>
         </svg>
-        <span>Join Raaz Army</span>
+        <span>Join Sonu King</span>
       </a>
 
       <div class="brand">
         Designed by <strong>FLOX ADS</strong>
       </div>
-      <script>
-(function () {
-  function startAutoClick() {
-    const cta = document.querySelector(".raaz-page .telegram-btn");
-    if (!cta) return;
-
-    const timer = setTimeout(function () {
-      cta.target = "_self";
-      cta.click();
-    }, 3000);
-
-    cta.addEventListener("click", function () {
-      clearTimeout(timer);
-    }, { once: true });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", startAutoClick, { once: true });
-  } else {
-    startAutoClick();
-  }
-})();
-</script>
 
     </div>
   </main>
+
+  <script>
+    (function () {
+      const AUTO_REDIRECT_DELAY = 3000;
+      const telegramButton = document.getElementById("telegramButton");
+
+      if (!telegramButton) return;
+
+      /*
+        Set to true to automatically open Telegram
+        after 3 seconds.
+        Set to false to require a button click.
+      */
+      const enableAutoRedirect = true;
+
+      if (!enableAutoRedirect) return;
+
+      let redirectTimer = setTimeout(function () {
+        window.location.href = telegramButton.href;
+      }, AUTO_REDIRECT_DELAY);
+
+      telegramButton.addEventListener("click", function () {
+        clearTimeout(redirectTimer);
+      }, { once: true });
+    })();
+  </script>
 </body>
 </html>
